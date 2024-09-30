@@ -32,20 +32,20 @@ li a {
   }
 
 .section1{
-    width: 100%;
+    max-width: 100%;
     display: inline-block;
     background-color: (rgb(245, 230, 230));
 }
 
 .section2{
-    width: 100%;
+    max-width: 100%;
     display: inline-block;
     color: white;
     background-image: url(bg.jpg);
 }
 
 .section3{
-    width: 100%;
+    max-width: 100%;
     display: inline-block;
     background-color: (rgb(245, 230, 230));
 }
@@ -71,3 +71,18 @@ li a {
     /* max-height: 500px; */
   }
   
+  @media screen and (max-width: 800px) {
+    .navbar{
+        display: none;
+    }
+
+    .topLogo{
+        max-width: 75%;
+    }
+    .sectionH{
+        font-size: 24px;
+    }
+    .section1, .section2, .section3{
+        font-size: 20px;
+    } 
+  }
