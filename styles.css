@@ -50,7 +50,16 @@ li a {
     background-color: (rgb(245, 230, 230));
 }
 
-.row{
+.section4{
+    /* align-items: center; */
+    /* max-width: 100%; */
+    /* display: inline-block; */
+    color: white;
+    background-image: url(bg.jpg);
+    padding: 20px;
+}
+
+/* .row{
     display: grid;
     grid-template-columns: repeat(4,1fr);
     grid-gap:25px;
@@ -58,18 +67,27 @@ li a {
     align-items: center;
     max-height: 500px;
     overflow: scroll;
-  }
+  } */
+
+  .row {
+    display: flex;
+    justify-content: space-between; 
+}
 
 .column {
     background-color: #182b49;
     color: white;
     padding: 20px;
-    text-align: center;
-    font-size: 30px;
+    box-sizing: border-box; 
+    overflow: scroll;
+    max-height: 500px;
+}
 
-    /* overflow: scroll; */
-    /* max-height: 500px; */
-  }
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
   
   @media screen and (max-width: 800px) {
     .navbar{
