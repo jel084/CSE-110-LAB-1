@@ -1,7 +1,17 @@
+body{
+    font-size: 28px;
+    padding: 10px;
+}
+
 .navbar{
     position: sticky;  
     top:0;
     width: 100%;
+    background-color: white;
+}
+
+.topLogo{
+    max-width: 400px;
 }
 
 ul {
@@ -9,9 +19,6 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: white;
-    /* max-width: 400px; */
-    font-size: 28px;
   }
 
 li {
@@ -31,66 +38,44 @@ li a {
     color: white;
   }
 
-.section1{
-    max-width: 100%;
+.section1, .section3{
     display: inline-block;
-    background-color: (rgb(245, 230, 230));
+    background-color: rgb(245, 230, 230);
+    padding: 20px;
 }
 
 .section2{
-    max-width: 100%;
     display: inline-block;
     color: white;
     background-image: url(bg.jpg);
-}
-
-.section3{
-    max-width: 100%;
-    display: inline-block;
-    background-color: (rgb(245, 230, 230));
+    padding: 20px;
 }
 
 .section4{
-    /* align-items: center; */
-    /* max-width: 100%; */
-    /* display: inline-block; */
     color: white;
     background-image: url(bg.jpg);
     padding: 20px;
 }
 
-/* .row{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-gap:25px;
-    justify-content: center;
-    align-items: center;
-    max-height: 500px;
-    overflow: scroll;
-  } */
-
   .row {
-    display: flex;
-    justify-content: space-between; 
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 25px;
+    padding: 10px;
 }
 
-.column {
+.row > div{
     background-color: #182b49;
+    text-align: left;
+    padding: 10px 10px;
+    float: left;
     color: white;
-    padding: 20px;
-    box-sizing: border-box; 
-    overflow: scroll;
     max-height: 500px;
-}
-
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
+    overflow: scroll;
 }
   
   @media screen and (max-width: 800px) {
-    .navbar{
+    ul{
         display: none;
     }
 
@@ -103,4 +88,12 @@ li a {
     .section1, .section2, .section3{
         font-size: 20px;
     } 
+
+    .row{
+        grid-template-columns: auto auto;
+    }
+
+    img{
+        max-width: 100%;
+    }
   }
